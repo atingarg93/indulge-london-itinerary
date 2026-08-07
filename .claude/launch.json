@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "itinerary",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["/Users/atingarg/Documents/Indulge A2/scripts/serve.py"],
+      "port": 4321
+    }
+  ]
+}
