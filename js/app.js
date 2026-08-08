@@ -319,26 +319,69 @@
     }).addTo(map);
 
     const layer = L.layerGroup().addTo(map);
-    let markers = [];
+    const routeLayer = L.layerGroup().addTo(map);
+    const home = PINS.find((p) => p.home);
+    const note = $("#route-note");
+
+    function marker(p, label, popup) {
+      return L.marker([p.lat, p.lng], {
+        title: p.name,
+        icon: L.divIcon({
+          className: "", iconSize: [26, 26], iconAnchor: [13, 13],
+          html: '<span class="pin' + (p.home ? " home" : "") + '">' + label + "</span>",
+        }),
+      }).bindPopup(popup);
+    }
 
     function paint(day) {
-      layer.clearLayers(); markers = [];
-      const set = PINS.filter((p) => day === "all" || p.day === day || p.home);
-      let n = 0;
-      set.forEach((p) => {
-        if (!p.home) n++;
-        const icon = L.divIcon({
-          className: "", iconSize: [26, 26], iconAnchor: [13, 13],
-          html: '<span class="pin' + (p.home ? " home" : "") + '">' + (p.home ? "★" : n) + "</span>",
-        });
-        const m = L.marker([p.lat, p.lng], { icon: icon, title: p.name })
-          .bindPopup("<b>" + esc(p.name) + "</b><small>" + esc(p.sub) + "</small>")
-          .addTo(layer);
-        markers.push(m);
+      layer.clearLayers();
+      routeLayer.clearLayers();
+      const all = day === "all";
+
+      /* Stops in the order they are visited. On "all four days" the route is
+         left off, because four overlapping loops read as a scribble. */
+      const stops = all
+        ? PINS.filter((p) => !p.home)
+        : PINS.filter((p) => p.day === day && !p.home && !p.atHome);
+      const inHouse = all ? [] : PINS.filter((p) => p.day === day && p.atHome);
+
+      const homeSub = all
+        ? home.sub
+        : "Start and finish" + (inHouse.length
+            ? ", and " + inHouse.map((s) => s.name).join(" and ") + " in the evening"
+            : "");
+      const shown = [marker(home, "★", "<b>" + esc(home.name) + "</b><small>" + esc(homeSub) + "</small>")];
+      shown[0].addTo(layer);
+
+      stops.forEach((p, i) => {
+        const label = all ? String(i + 1) : String(i + 1);
+        const m = marker(p, label,
+          "<b>" + esc(p.name) + "</b><small>" + (all ? esc(p.sub) : "Stop " + (i + 1) + " · " + esc(p.sub)) + "</small>");
+        m.addTo(layer);
+        shown.push(m);
       });
-      if (markers.length) {
-        map.fitBounds(L.featureGroup(markers).getBounds(), { padding: [56, 56], maxZoom: 14 });
+
+      if (!all && stops.length) {
+        const pts = [[home.lat, home.lng]]
+          .concat(stops.map((s) => [s.lat, s.lng]))
+          .concat([[home.lat, home.lng]]);
+        L.polyline(pts, { color: "#D29C33", weight: 9, opacity: 0.1, lineJoin: "round" }).addTo(routeLayer);
+        L.polyline(pts, {
+          color: "#D29C33", weight: 2, opacity: 0.9, lineCap: "round",
+          dashArray: "1 9", className: "route-line",
+        }).addTo(routeLayer);
       }
+
+      if (note) {
+        if (all) {
+          note.textContent = "Choose a single day to trace its route.";
+        } else {
+          const names = [home.name].concat(stops.map((s) => s.name)).concat([home.name]);
+          note.textContent = names.join("  →  ");
+        }
+      }
+
+      map.fitBounds(L.featureGroup(shown).getBounds(), { padding: [58, 58], maxZoom: 14 });
     }
     paint("all");
 

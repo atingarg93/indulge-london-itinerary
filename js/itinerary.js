@@ -50,7 +50,7 @@ const DAYS = [
     n: "I", id: "thu", weekday: "Thursday", date: "10 September",
     tag: "Arrival",
     title: "Arrival, and an easy first evening",
-    lede: "Nearly ten hours in the air, then a warm, unhurried dinner with no dress code and nothing to prove. The day asks nothing of you.",
+    lede: "Nearly ten hours in the air, then a quiet dinner that tastes like home, at the best Indian room in the city. The day asks nothing of you.",
     stops: ["The Connaught", "Dishoom Covent Garden"],
     events: [
       { type: "travel", start: "10:05", loc: "Delhi (DEL)", end: "15:20", kind: "Flight", cost: "£8,477",
@@ -87,7 +87,7 @@ const DAYS = [
         web: "https://www.dishoom.com/covent-garden/", tel: "+44 20 7420 9320",
         map: "Dishoom+Covent+Garden,+12+Upper+St+Martin's+Lane,+London+WC2H+9FB",
         reserved: "Table reserved",
-        body: "The original Dishoom, set in a restored Bombay Irani café. The house black daal is cooked for more than twenty four hours, and the chicken ruby and the lamb raan are the other signatures. Chosen for the first night because it asks nothing of you: no dress code, no tasting menu, no ceremony, and food that tastes like home at the end of a long flight.",
+        body: "The original Dishoom, set in a restored Bombay Irani café, and the room most Londoners will name if you ask them where to eat Indian food in this city. The house black daal is cooked for more than twenty four hours, and the chicken ruby and the lamb raan are the other signatures. Chosen for the first night because there is no dress code, no tasting menu and no ceremony, only very good food at the end of a very long flight.",
         detail: [
           ["Hours", "Thursday 08:00 to 23:00"],
           ["Order", "Black daal, chicken ruby, lamb raan, and a house chai to finish"],
@@ -143,7 +143,7 @@ const DAYS = [
         title: "The couple's ritual at Aman Spa",
         address: "The Connaught, Carlos Place, Mayfair, London W1K 2AL",
         img: "aman-spa",
-        alt: "The indoor pool at the Aman Spa, The Connaught",
+        alt: "The couple's treatment room at the Aman Spa, The Connaught, with two tables behind wooden lattice doors",
         web: "https://www.maybourne.com/the-connaught/aman-spa/", tel: "+44 20 3147 7305",
         map: "Aman+Spa+at+The+Connaught,+Carlos+Place,+London+W1K+2AL",
         reserved: "Couple's room held",
@@ -188,8 +188,8 @@ const DAYS = [
         title: "Windsor Castle and St George's Chapel",
         address: "Windsor, Berkshire SL4 1NJ",
         img: "windsor-castle", img2: "st-georges-chapel",
-        alt: "The walls and Round Tower of Windsor Castle",
-        alt2: "The nave of St George's Chapel, Windsor Castle",
+        alt: "St George's Chapel, within the walls of Windsor Castle",
+        alt2: "The nave and choir stalls inside St George's Chapel",
         web: "https://www.rct.uk/visit/windsor-castle", tel: "+44 303 123 7304",
         map: "Windsor+Castle,+Windsor,+Berkshire+SL4+1NJ",
         reserved: "Tickets held · chapel entry included",
@@ -236,7 +236,7 @@ const DAYS = [
         title: "Dinner cruise on the Thames",
         address: "Westminster Pier, Victoria Embankment, London SW1A 2JH",
         img: "thames-cruise",
-        alt: "The Palace of Westminster and Big Ben lit up over the Thames at night",
+        alt: "A couple dining at a window table aboard a Thames dinner cruise",
         web: "https://www.cityexperiences.com/london/city-cruises/", tel: "+44 20 7740 0400",
         map: "Westminster+Pier,+Victoria+Embankment,+London+SW1A+2JH",
         reserved: "Window table for two reserved",
@@ -268,7 +268,7 @@ const DAYS = [
         address: "Tower of London, London EC3N 4AB",
         img: "tower-of-london", img2: "crown-jewels",
         alt: "The Tower of London seen from the River Thames",
-        alt2: "The Imperial State Crown, part of the Crown Jewels",
+        alt2: "The Jewel House at the Tower of London, where the Crown Jewels are displayed",
         web: "https://www.hrp.org.uk/tower-of-london/", tel: "+44 333 320 6000",
         map: "Tower+of+London,+London+EC3N+4AB",
         reserved: "Tickets held · Yeoman Warder tour included",
@@ -299,7 +299,7 @@ const DAYS = [
         title: "Burlington Arcade and Piccadilly",
         address: "51 Piccadilly, London W1J 0QJ",
         img: "burlington-arcade",
-        alt: "Looking down the length of Burlington Arcade",
+        alt: "The north entrance of Burlington Arcade, with a Beadle on duty",
         web: "https://burlingtonarcade.com/", tel: "",
         map: "Burlington+Arcade,+51+Piccadilly,+London+W1J+0QJ",
         body: "Britain's longest covered shopping arcade, opened in 1819 and still patrolled by its own Beadles, the oldest small police force in the world, in top hats and frock coats. Ten minutes from Rules and on the way back to Mayfair, and one of very few genuinely elegant places to shop in London on a Sunday afternoon.",
@@ -327,13 +327,17 @@ const DAYS = [
 
 /* ---------- map ----------------------------------------------------------- */
 
+/* Order matters. Each day's pins are listed in the order they are visited, and
+   the route line is drawn from The Connaught through them and back again.
+   atHome marks a stop inside the hotel itself, so it is listed on the hotel
+   marker rather than given a pin of its own on top of it. */
 const PINS = [
   { day: "all", name: "The Connaught", sub: "Your residence", lat: 51.5099, lng: -0.1490, home: true },
   { day: "thu", name: "Dishoom Covent Garden", sub: "Thursday, dinner", lat: 51.5115, lng: -0.1275 },
   { day: "fri", name: "Bicester Village", sub: "Friday, shopping", lat: 51.8865, lng: -1.1560 },
   { day: "fri", name: "Cecconi's Bicester Village", sub: "Friday, lunch", lat: 51.8869, lng: -1.1548 },
-  { day: "fri", name: "Aman Spa", sub: "Friday, the couple's ritual", lat: 51.5099, lng: -0.1492 },
-  { day: "fri", name: "Hélène Darroze", sub: "Friday, the anniversary dinner", lat: 51.5100, lng: -0.1488 },
+  { day: "fri", name: "Aman Spa", sub: "Friday, the couple's ritual", lat: 51.5099, lng: -0.1492, atHome: true },
+  { day: "fri", name: "Hélène Darroze", sub: "Friday, the anniversary dinner", lat: 51.5100, lng: -0.1488, atHome: true },
   { day: "sat", name: "Windsor Castle", sub: "Saturday, morning", lat: 51.4839, lng: -0.6044 },
   { day: "sat", name: "The Ivy Royal Windsor", sub: "Saturday, lunch", lat: 51.4835, lng: -0.6081 },
   { day: "sat", name: "Wine and cheese tasting", sub: "Saturday, departs Vauxhall Bridge Road", lat: 51.4906, lng: -0.1373 },

@@ -65,7 +65,8 @@
   <div class="bg">
     <img src="assets/img/hero.webp"
          srcset="assets/img/hero@sm.webp 800w, assets/img/hero.webp 1600w"
-         sizes="100vw" alt="The London skyline at dusk" fetchpriority="high" width="1600" height="900">
+         sizes="100vw" alt="London from the air, the Thames curving past Tower Bridge and the City"
+         fetchpriority="high" width="1600" height="1067">
   </div>
 
   <div class="top">
@@ -103,10 +104,10 @@
     <div class="journey">
       <article class="jcard rv">
         <div class="pic"><img src="assets/img/ba-business.webp"
-          srcset="assets/img/ba-business@sm.webp 800w, assets/img/ba-business.webp 1600w"
-          sizes="(max-width:1000px) 92vw, 360px"
+          srcset="assets/img/ba-business@sm.webp 800w, assets/img/ba-business.webp 1200w"
+          sizes="(max-width:1000px) 92vw, 400px"
           alt="A British Airways Club Suite business class seat" loading="lazy" decoding="async"
-          width="1600" height="1129"></div>
+          width="1200" height="799"></div>
         <div class="in">
           <p class="eyebrow gold">Outbound</p>
           <h3>Delhi to London</h3>
@@ -129,10 +130,10 @@
 
       <article class="jcard rv">
         <div class="pic"><img src="assets/img/ai-business.webp"
-          srcset="assets/img/ai-business@sm.webp 800w, assets/img/ai-business.webp 1171w"
-          sizes="(max-width:1000px) 92vw, 360px"
-          alt="An Air India business class flatbed seat" loading="lazy" decoding="async"
-          width="1171" height="732"></div>
+          srcset="assets/img/ai-business@sm.webp 800w, assets/img/ai-business.webp 1600w"
+          sizes="(max-width:1000px) 92vw, 400px"
+          alt="The business class cabin of an Air India Boeing 787-9" loading="lazy" decoding="async"
+          width="1600" height="1066"></div>
         <div class="in">
           <p class="eyebrow gold">Return</p>
           <h3>London to Delhi</h3>
@@ -155,10 +156,10 @@
 
       <article class="jcard rv">
         <div class="pic"><img src="assets/img/connaught-exterior.webp"
-          srcset="assets/img/connaught-exterior@sm.webp 800w, assets/img/connaught-exterior.webp 1600w"
-          sizes="(max-width:1000px) 92vw, 360px"
-          alt="The Connaught hotel on Carlos Place, Mayfair" loading="lazy" decoding="async"
-          width="1600" height="1200"></div>
+          srcset="assets/img/connaught-exterior@sm.webp 800w, assets/img/connaught-exterior.webp 1366w"
+          sizes="(max-width:1000px) 92vw, 400px"
+          alt="The entrance to The Connaught on Carlos Place, Mayfair" loading="lazy" decoding="async"
+          width="1366" height="900"></div>
         <div class="in">
           <p class="eyebrow gold">Residence</p>
           <h3>The Connaught</h3>
@@ -206,10 +207,6 @@
 <section class="band dark" aria-labelledby="why-h">
   <div class="wrap">
     <p class="eyebrow gold rv" style="text-align:center" id="why-h">Why the days sit in this order</p>
-    <blockquote class="why-quote rv" style="margin-top:26px">
-      Friday holds the anniversary because it is the first fully rested day, and because a morning of
-      shopping, a couple's ritual and three Michelin stars is the celebration itself.
-    </blockquote>
     <div class="why-grid rv">
       <div><p class="d">Thursday</p><p>You land at 15:20 after nearly ten hours in the air. Anything
         formal before seven would be unkind, so the evening is warm, close and easy.</p></div>
@@ -220,6 +217,18 @@
       <div><p class="d">Sunday</p><p>Nothing significant opens in London before half past eleven on a
         Sunday, which is exactly why the Tower takes the morning and the arcade takes the afternoon.</p></div>
     </div>
+  </div>
+</section>
+
+<!-- ===================== INTERLUDE ===================== -->
+<section class="interlude" aria-hidden="true">
+  <div class="wrap">
+    <span class="line"></span>
+    <div class="mid">
+      <p class="t">The itinerary</p>
+      <p class="s mono">Four days · 10 to 13 September 2026</p>
+    </div>
+    <span class="line"></span>
   </div>
 </section>
 
@@ -271,6 +280,7 @@
       <button class="chip" type="button" data-day="sat" aria-pressed="false">Saturday</button>
       <button class="chip" type="button" data-day="sun" aria-pressed="false">Sunday</button>
     </div>
+    <p id="route-note" class="route-note rv" aria-live="polite"></p>
     <div id="map" class="rv" role="application"
          aria-label="Map of every venue in the itinerary, centred on The Connaught in Mayfair. Every venue is also listed with its full address in the day pages and the contact directory below."></div>
   </div>

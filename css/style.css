@@ -125,8 +125,8 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
 @media (prefers-reduced-motion: reduce){ .hero .bg img{animation:none; transform:scale(1.04)} }
 .hero .bg::after{
   content:""; position:absolute; inset:0;
-  background:linear-gradient(180deg, rgba(18,18,18,.82) 0%, rgba(18,18,18,.48) 34%,
-              rgba(18,18,18,.62) 70%, rgba(18,18,18,.94) 100%);
+  background:linear-gradient(180deg, rgba(18,18,18,.84) 0%, rgba(18,18,18,.58) 30%,
+              rgba(18,18,18,.66) 62%, rgba(18,18,18,.95) 100%);
 }
 .hero > *{position:relative; z-index:1}
 .hero .top{padding-top:8px}
@@ -187,19 +187,20 @@ section{position:relative}
 .jcard{background:var(--paper-2); border:1px solid var(--rule); display:flex; flex-direction:column;
   overflow:hidden; transition:transform .5s cubic-bezier(.22,.7,.3,1), box-shadow .5s ease}
 .jcard:hover{transform:translateY(-4px); box-shadow:0 18px 44px -26px rgba(18,18,18,.5)}
-.jcard .pic{aspect-ratio:16/10; overflow:hidden; background:var(--ink-3)}
+.jcard .pic{aspect-ratio:4/3; overflow:hidden; background:var(--ink-3)}
 .jcard .pic img{width:100%; height:100%; object-fit:cover; transition:transform .8s cubic-bezier(.22,.7,.3,1)}
 .jcard:hover .pic img{transform:scale(1.05)}
-.jcard .in{padding:22px 24px 26px; display:flex; flex-direction:column; flex:1}
-.jcard h3{font-size:21px; margin-top:14px}
-.jcard .leg{display:flex; align-items:center; gap:12px; margin-top:16px; font-family:var(--mono)}
-.jcard .leg .code{font-size:19px; color:var(--ink); letter-spacing:.02em}
-.jcard .leg .code small{display:block; font-size:10.5px; color:var(--txt-3); letter-spacing:.1em; margin-top:3px}
+.jcard .in{padding:clamp(24px,2.2vw,32px) clamp(24px,2.2vw,32px) clamp(28px,2.4vw,36px);
+  display:flex; flex-direction:column; flex:1}
+.jcard h3{font-size:clamp(23px,2vw,27px); margin-top:15px}
+.jcard .leg{display:flex; align-items:center; gap:12px; margin-top:20px; font-family:var(--mono)}
+.jcard .leg .code{font-size:23px; color:var(--ink); letter-spacing:.02em}
+.jcard .leg .code small{display:block; font-size:11.5px; color:var(--txt-3); letter-spacing:.1em; margin-top:4px}
 .jcard .leg .arrow{flex:1; height:1px; background:var(--rule); position:relative}
 .jcard .leg .arrow::after{content:""; position:absolute; right:0; top:-2.5px; width:5px; height:5px;
   border-top:1px solid var(--gold); border-right:1px solid var(--gold); transform:rotate(45deg)}
-.jcard .meta{margin-top:16px; font-size:14px; color:var(--txt-2)}
-.jcard .meta li{list-style:none; padding:7px 0; border-top:1px dotted var(--rule);
+.jcard .meta{margin-top:20px; font-size:15px; color:var(--txt-2)}
+.jcard .meta li{list-style:none; padding:9px 0; border-top:1px dotted var(--rule);
   display:flex; justify-content:space-between; gap:14px}
 .jcard .meta ul{margin:0; padding:0}
 .jcard .meta li span:first-child{color:var(--txt-3); font-family:var(--mono); font-size:10.5px;
@@ -240,16 +241,24 @@ section{position:relative}
 /* ===========================================================================
    04 · WHY THIS ORDER
    =========================================================================== */
-.why-quote{
-  font-family:var(--serif); font-style:italic; font-size:clamp(23px, 3.4vw, 38px); line-height:1.4;
-  color:var(--cream); max-width:24ch; margin:0 auto; text-align:center; text-wrap:balance;
-}
-.why-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--rule-dark);
-  margin-top:clamp(46px,6vw,74px); border:1px solid var(--rule-dark)}
-.why-grid div{background:var(--ink); padding:28px 24px 32px}
-.why-grid .d{font-family:var(--mono); font-size:10.5px; letter-spacing:.22em; text-transform:uppercase;
-  color:var(--gold)}
-.why-grid p{margin-top:12px; font-size:15px; color:rgba(239,238,236,.72); line-height:1.6}
+.why-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--rule-dark);
+  margin-top:clamp(34px,4.5vw,54px); border:1px solid var(--rule-dark)}
+.why-grid div{background:var(--ink); padding:clamp(34px,4vw,52px) clamp(28px,3.4vw,48px)}
+.why-grid .d{font-family:var(--serif); font-size:clamp(21px,2.4vw,28px); letter-spacing:.01em;
+  text-transform:none; color:var(--gold)}
+.why-grid p{margin-top:16px; font-size:clamp(16px,1.35vw,18.5px); color:rgba(239,238,236,.76);
+  line-height:1.66; max-width:44ch}
+
+/* ---------- interlude, the break before the itinerary opens --------------- */
+.interlude{background:var(--paper); padding:clamp(52px,7vw,86px) 0}
+.interlude .wrap{display:flex; align-items:center; gap:clamp(20px,4vw,48px)}
+.interlude .line{flex:1; height:1px; background:linear-gradient(90deg,
+  transparent, var(--rule) 22%, var(--rule) 78%, transparent)}
+.interlude .mid{text-align:center; flex:0 0 auto}
+.interlude .t{font-family:var(--serif); font-size:clamp(21px,2.6vw,30px); color:var(--ink);
+  font-style:italic}
+.interlude .s{font-size:10.5px; letter-spacing:.26em; text-transform:uppercase; color:var(--txt-3);
+  margin-top:9px; padding-left:.26em}
 
 /* ===========================================================================
    05-08 · DAYS
@@ -393,7 +402,16 @@ a.tag:hover{border-color:var(--gold); color:var(--ink)}
 .band.dark .chip{background:transparent; border-color:var(--rule-dark); color:rgba(239,238,236,.6)}
 .band.dark .chip[aria-pressed="true"]{background:var(--gold); border-color:var(--gold); color:var(--ink)}
 
+.route-note{font-family:var(--mono); font-size:11.5px; line-height:1.9; color:var(--gold);
+  margin:0 0 18px; letter-spacing:.04em}
+.band.dark .route-note:empty{display:none}
+
 #map{height:clamp(380px, 58vh, 620px); background:var(--ink-3); border:1px solid var(--rule-dark)}
+
+/* the day route, drawn out from the hotel and back */
+.route-line{stroke-dasharray:1 9; animation:route 22s linear infinite}
+@keyframes route{to{stroke-dashoffset:-200}}
+@media (prefers-reduced-motion: reduce){ .route-line{animation:none} }
 .leaflet-container{font-family:var(--sans); background:#1A1A1A}
 .leaflet-popup-content-wrapper{background:var(--ink); color:var(--off); border-radius:2px;
   box-shadow:0 10px 40px -12px rgba(0,0,0,.7)}
@@ -553,6 +571,11 @@ footer .credits .list a{color:rgba(239,238,236,.5)}
 }
 @media (max-width:620px){
   .why-grid{grid-template-columns:1fr}
+  /* the side rules collapse to nothing at this width, so give the mid block
+     its own rule above instead */
+  .interlude .wrap{flex-direction:column; gap:0}
+  .interlude .line{display:none}
+  .interlude .mid{padding-top:26px; border-top:1px solid var(--rule); width:100%}
   .hero .foot{flex-direction:column; align-items:flex-start; gap:16px}
   .hero .foot .scrollcue{display:none}
   .ev .pics.two{grid-template-columns:1fr}

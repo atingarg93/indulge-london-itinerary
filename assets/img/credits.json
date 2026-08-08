@@ -1,35 +1,35 @@
 {
   "hero": {
-    "source": "Wikimedia Commons",
-    "by": "Christine Matthews",
-    "license": "CC BY-SA 2.0",
-    "url": "https://commons.wikimedia.org/wiki/File:Evening_Light_on_the_London_Skyline_from_New_Zealand_House,_Haymarket,_London_W1_-_geograph.org.uk_-_5110679.jpg",
+    "source": "Benjamin Davies",
+    "by": "Benjamin Davies",
+    "license": "Unsplash",
+    "url": "https://unsplash.com/photos/Oja2ty_9ZLM",
     "w": 1600,
-    "h": 900
+    "h": 1067
   },
   "ba-business": {
-    "source": "Wikimedia Commons",
-    "by": "MatJarosz",
-    "license": "CC BY-SA 4.0",
-    "url": "https://commons.wikimedia.org/wiki/File:British_Airways_Club_Suite_seat.jpg",
-    "w": 1600,
-    "h": 1129
+    "source": "Mainly Miles",
+    "by": "Mainly Miles",
+    "license": "Courtesy of the publisher",
+    "url": "https://mainlymiles.com/",
+    "w": 1200,
+    "h": 799
   },
   "ai-business": {
     "source": "Air India",
     "by": "Air India",
-    "license": "Courtesy of the venue",
-    "url": "https://airindia.com",
-    "w": 1171,
-    "h": 732
+    "license": "Courtesy of the airline",
+    "url": "https://www.airindia.com/",
+    "w": 1600,
+    "h": 1066
   },
   "connaught-exterior": {
-    "source": "Wikimedia Commons",
-    "by": "Peter Barr",
-    "license": "CC BY-SA 2.0",
-    "url": "https://commons.wikimedia.org/wiki/File:Connaught,_Mayfair_-_geograph.org.uk_-_2691269.jpg",
-    "w": 1600,
-    "h": 1200
+    "source": "The Connaught",
+    "by": "The Connaught",
+    "license": "Courtesy of the venue",
+    "url": "https://www.maybourne.com/the-connaught/",
+    "w": 1366,
+    "h": 900
   },
   "grosvenor-suite": {
     "source": "The Connaught, Maybourne",
@@ -48,12 +48,12 @@
     "h": 1063
   },
   "bicester": {
-    "source": "Bicester Village, The Bicester Collection",
-    "by": "Bicester Village, The Bicester Collection",
-    "license": "Courtesy of the venue",
-    "url": "https://thebicestercollection.com",
-    "w": 1440,
-    "h": 810
+    "source": "We Know London",
+    "by": "We Know London",
+    "license": "Courtesy of the publisher",
+    "url": "https://www.weknowlondon.com/",
+    "w": 1218,
+    "h": 768
   },
   "cecconis": {
     "source": "Cecconi's, Soho House & Co",
@@ -64,12 +64,12 @@
     "h": 1067
   },
   "aman-spa": {
-    "source": "Aman Spa at The Connaught",
-    "by": "Aman Spa at The Connaught",
+    "source": "Aman",
+    "by": "Aman",
     "license": "Courtesy of the venue",
-    "url": "https://maybourne.com",
-    "w": 1600,
-    "h": 1066
+    "url": "https://www.aman.com/",
+    "w": 945,
+    "h": 583
   },
   "helene-darroze": {
     "source": "Hélène Darroze at The Connaught",
@@ -80,28 +80,28 @@
     "h": 1066
   },
   "windsor-castle": {
-    "source": "Wikimedia Commons",
-    "by": "Suicasmo",
-    "license": "CC BY-SA 4.0",
-    "url": "https://commons.wikimedia.org/wiki/File:Windsor_Castle_20160830-1.jpg",
-    "w": 1600,
-    "h": 1067
-  },
-  "st-georges-chapel": {
-    "source": "Wikimedia Commons",
-    "by": "Aurelien Guichard from London, United Kingdom (changes by Rabanus Flavus)",
+    "source": "Aurelien Guichard",
+    "by": "Aurelien Guichard",
     "license": "CC BY-SA 2.0",
     "url": "https://commons.wikimedia.org/wiki/File:St._Georges_Chapel,_Windsor_Castle_(2).jpg",
     "w": 1600,
     "h": 1034
   },
-  "ivy-windsor": {
-    "source": "The Ivy Collection",
-    "by": "The Ivy Collection",
-    "license": "Courtesy of the venue",
-    "url": "https://ivycollection.com",
+  "st-georges-chapel": {
+    "source": "TIME",
+    "by": "TIME",
+    "license": "Courtesy of the publisher",
+    "url": "https://time.com/",
     "w": 1600,
-    "h": 1200
+    "h": 900
+  },
+  "ivy-windsor": {
+    "source": "Visit Windsor",
+    "by": "Visit Windsor",
+    "license": "Courtesy of the venue",
+    "url": "https://www.windsor.gov.uk/",
+    "w": 940,
+    "h": 492
   },
   "wine-tasting": {
     "source": "Evan Evans Tours",
@@ -112,43 +112,43 @@
     "h": 758
   },
   "thames-cruise": {
-    "source": "Wikimedia Commons",
-    "by": "Peter Shimmon",
-    "license": "CC BY-SA 2.0",
-    "url": "https://commons.wikimedia.org/wiki/File:River_Thames_and_Westminster_at_night_-_geograph.org.uk_-_7504558.jpg",
-    "w": 1600,
-    "h": 1049
+    "source": "Virgin Experience Days",
+    "by": "Virgin Experience Days",
+    "license": "Courtesy of the operator",
+    "url": "https://www.virginexperiencedays.co.uk/",
+    "w": 1200,
+    "h": 800
   },
   "tower-of-london": {
-    "source": "Wikimedia Commons",
-    "by": "Bob Collowan",
-    "license": "CC BY-SA 3.0",
-    "url": "https://commons.wikimedia.org/wiki/File:Tower_of_London_viewed_from_the_River_Thames.jpg",
+    "source": "Shutterstock via Choose Where",
+    "by": "Shutterstock via Choose Where",
+    "license": "Courtesy of the publisher",
+    "url": "https://choosewhere.com/",
     "w": 1600,
-    "h": 1005
+    "h": 1066
   },
   "crown-jewels": {
-    "source": "Wikimedia Commons",
-    "by": "ukhouseoflords",
-    "license": "CC BY 2.0",
-    "url": "https://commons.wikimedia.org/wiki/File:Arrival_of_the_Imperial_State_Crown.jpg",
+    "source": "Royal Asiatic Art Institute",
+    "by": "Royal Asiatic Art Institute",
+    "license": "Courtesy of the publisher",
+    "url": "https://raai.com/",
     "w": 1600,
-    "h": 1064
+    "h": 1000
   },
   "rules": {
-    "source": "Wikimedia Commons",
-    "by": "Ewan-M",
-    "license": "CC BY-SA 2.0",
-    "url": "https://commons.wikimedia.org/wiki/File:Rules,_Covent_Garden,_WC2.jpg",
+    "source": "Google Maps",
+    "by": "Google Maps contributor",
+    "license": "Courtesy of the contributor",
+    "url": "https://maps.app.goo.gl/",
     "w": 1600,
-    "h": 2133
+    "h": 1200
   },
   "burlington-arcade": {
-    "source": "Wikimedia Commons",
-    "by": "Txllxt TxllxT",
-    "license": "CC BY-SA 4.0",
-    "url": "https://commons.wikimedia.org/wiki/File:London_-_Piccadilly_-_Burlington_Arcade.jpg",
-    "w": 1600,
-    "h": 2417
+    "source": "Andrew Dunn",
+    "by": "Andrew Dunn",
+    "license": "CC BY-SA 2.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Burlington_Arcade,_north_entrance.jpg",
+    "w": 1257,
+    "h": 881
   }
 }
