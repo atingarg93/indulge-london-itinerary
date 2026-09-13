@@ -4,3 +4,5 @@ node_modules/
 *.log
 assets/img/_raw/
 .claude/settings.local.json
+.claude/
+scripts/
