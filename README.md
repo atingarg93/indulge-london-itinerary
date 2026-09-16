@@ -278,6 +278,7 @@ css/style.css           the complete stylesheet, including print styles
 js/itinerary.js         every piece of itinerary content, the single source of truth
 js/app.js               renders the days, timetable, map and directory, and the interactions
 assets/img/             19 photographs as WebP at two widths, plus credits.json
+assets/video/           the looping London montage used behind the hero
 wireframe/              the approved wireframe
 docs/                   the preview image used in this README
 vercel.json             caching and security headers
@@ -287,13 +288,15 @@ vercel.json             caching and security headers
   for type. No build step and no dependencies to install.
 - **Hosting:** Vercel, deployed automatically from this repository.
 - **Performance:** responsive WebP images with `srcset`, lazy loading below the fold, and long lived
-  caching on image assets.
+  caching on image and video assets. The hero video is a single 2.6 MB file that loads only on wide
+  screens, and never when the viewer has asked for reduced motion or is on a metered connection.
 - **Privacy:** the page is marked `noindex, nofollow` so it does not appear in search results, and
   personal contact details are masked throughout.
 
 ## 12. Photography and credits
 
-Landmark photography is from Wikimedia Commons under Creative Commons licences, with each photographer
+The hero background is a looping montage of four London clips from Mixkit, used under its free
+stock video licence. Landmark photography is from Wikimedia Commons under Creative Commons licences, with each photographer
 named in the footer of the live site. Hotel, restaurant, cabin and experience imagery is credited to
 the venue, airline or publication it came from. All imagery is used solely for this non commercial
 assessment, and any image will be removed promptly on request by its owner.

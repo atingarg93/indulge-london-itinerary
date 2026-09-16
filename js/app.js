@@ -413,6 +413,23 @@
   }
 
   /* ======================================================================
+     HERO VIDEO
+     ====================================================================== */
+
+  /* Only where it is welcome: wide screens, motion not reduced, connection not
+     metered. Everywhere else the still image stays, which is why the video
+     carries no source until we decide to give it one. */
+  function initHeroVideo() {
+    const v = $(".hero .bg video");
+    if (!v || (navigator.connection || {}).saveData) return;
+    if (!window.matchMedia("(min-width:861px) and (prefers-reduced-motion:no-preference)").matches) return;
+    v.muted = true;
+    v.autoplay = true;
+    v.addEventListener("playing", () => v.classList.add("on"), { once: true });
+    v.src = v.dataset.src;
+  }
+
+  /* ======================================================================
      NAV, SCROLLSPY, REVEAL
      ====================================================================== */
 
@@ -473,6 +490,7 @@
     renderDirectory();
     renderCredits();
     initChrome();
+    initHeroVideo();
     if (document.readyState !== "loading") initMap(); else window.addEventListener("load", initMap);
   });
 })();
